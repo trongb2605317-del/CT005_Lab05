@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Trang giới thiệu thông tin cá nhân</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f2f6fa;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        header {
+            background: linear-gradient(135deg, #1565c0, #42a5f5);
+            color: white;
+            text-align: center;
+            padding: 50px 20px;
+        }
+
+        header h1 {
+            margin: 0 0 10px;
+            font-size: 36px;
+        }
+
+        header p {
+            margin: 0;
+            font-size: 18px;
+        }
+
+        nav {
+            background-color: #0d47a1;
+            text-align: center;
+            padding: 12px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 30px auto;
+            padding: 0 20px;
+        }
+
+        .card {
+            background-color: white;
+            margin-bottom: 30px;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+        }
+
+        .card h2 {
+            color: #1565c0;
+            border-bottom: 2px solid #e3f2fd;
+            padding-bottom: 10px;
+        }
+
+        .info {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+        }
+
+        .info p {
+            margin: 5px 0;
+        }
+
+        .product {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .product img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            border: 1px solid #ddd;
+        }
+
+        iframe {
+            width: 100%;
+            max-width: 850px;
+            height: 480px;
+            border: none;
+            border-radius: 10px;
+        }
+
+        .pdf-container {
+            width: 100%;
+            height: 600px;
+        }
+
+        .pdf-container embed {
+            width: 100%;
+            height: 100%;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+        }
+
+        .download-btn {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 10px 20px;
+            background-color: #1565c0;
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+        }
+
+        .download-btn:hover {
+            background-color: #0d47a1;
+        }
+
+        footer {
+            background-color: #0d47a1;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+        }
+
+        @media (max-width: 700px) {
+            .info {
+                grid-template-columns: 1fr;
+            }
+
+            iframe {
+                height: 300px;
+            }
+
+            .pdf-container {
+                height: 450px;
+            }
+
+            header h1 {
+                font-size: 28px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- PHẦN ĐẦU TRANG -->
+    <header>
+        <h1>TRANG GIỚI THIỆU THÔNG TIN CÁ NHÂN</h1>
+        <p>Hồ sơ cá nhân và các sản phẩm học tập</p>
+    </header>
+
+    <!-- MENU -->
+    <nav>
+        <a href="#gioithieu">Giới thiệu</a>
+        <a href="#pdf">Sản phẩm PDF</a>
+        <a href="#infographic">Infographic</a>
+        <a href="#video">Video</a>
+    </nav>
+
+    <main class="container">
+
+        <!-- THÔNG TIN CÁ NHÂN -->
+        <section class="card" id="gioithieu">
+            <h2>1. Thông tin cá nhân</h2>
+
+            <div class="info">
+                <div>
+                    <p><strong>Họ và tên:</strong>Trần Quốc Trọng</p>
+                    <p><strong>Ngày sinh:</strong>24/09/2008</p>
+                    <p><strong>Giới tính:</strong>Nam</p>
+                </div>
+
+                <div>
+                    <p><strong>Lớp:</strong>DI26D1A1</p>
+                    <p><strong>Trường:</strong>Đai học Cần Thơ</p>
+                    <p><strong>Email:</strong>trongb2605317@student.ctu.edu.vn</p>
+                </div>
+            </div>
+
+            <p>
+                Xin chào! Tôi là Trần Quốc Trọng, hiện đang là sinh viên ngành
+                Truyền thông đa phương tiện. Tôi yêu thích lập trình, thiết kế web
+                và tìm hiểu các công nghệ mới.
+            </p>
+        </section>
+
+
+        <!-- SẢN PHẨM PDF -->
+        <section class="card" id="pdf">
+            <h2>2. Sản phẩm PDF</h2>
+
+            <p>
+                Dưới đây là tài liệu PDF được thực hiện trong quá trình học tập.
+            </p>
+
+            <div class="product pdf-container">
+                <embed src="Lab05_Ex1.2.pdf"
+                       type="application/pdf">
+            </div>
+
+            <a class="download-btn"
+               href="Lab05_Ex1.2.pdf"
+               target="_blank">
+                Xem / Tải file PDF
+            </a>
+        </section>
+
+
+        <!-- SẢN PHẨM INFOGRAPHIC -->
+        <section class="card" id="infographic">
+            <h2>3. Sản phẩm Infographic</h2>
+
+            <p>
+                Infographic minh họa nội dung được thực hiện trong bài học.
+            </p>
+
+            <div class="product">
+                <img src="Lab05_Ex2.1.png"
+                     alt="Infographic Lab05 Ex2.1">
+            </div>
+        </section>
+
+
+        <!-- SẢN PHẨM VIDEO -->
+        <section class="card" id="video">
+            <h2>4. Sản phẩm Video YouTube</h2>
+
+            <p>
+                Video trình bày nội dung và hướng dẫn thực hiện Nhiệm vụ 2.2.
+            </p>
+
+            <div class="product">
+
+                <!-- Thay VIDEO_ID bằng ID video YouTube của bạn -->
+                <iframe
+                    src="video.mp4"
+                    title="Video YouTube - Nhiệm vụ 2.2"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen>
+                </iframe>
+
+            </div>
+        </section>
+
+    </main>
+
+
+    <!-- CHÂN TRANG -->
+    <footer>
+        <p>© 2026 Trần Quốc Trọng - Trang giới thiệu thông tin cá nhân</p>
+        <p>Sản phẩm được thực hiện với mục đích học tập.</p>
+    </footer>
+
+</body>
+</html>
